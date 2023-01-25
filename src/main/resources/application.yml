@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://localhost:5432/OAuth2"
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 718493131534
+            clientSecret: hqka6g0dsvftb3on2fkolljh5p6qpo45
+            scope:
+              - email
+              - profile
+
+
+
+server:
+  port: 7777
